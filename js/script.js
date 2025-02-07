@@ -3,10 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function pageLoaded() {
+    handleLinks();
     drawTimeline();
-
 }
 
+
+function handleLinks() {
+    
+}
 
 function animateMainMenu() {
     document.querySelectorAll(".main-menu li").forEach(el => {

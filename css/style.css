@@ -98,7 +98,18 @@ section {
     margin-left: 45px;
 }
 
-.main-menu {
+.dev-info-description div {
+    display: flex;
+    margin-top: 10px;
+    width: 0;
+    overflow: hidden;
+    animation: name-appear 2s ease-in forwards;
+    animation-delay: 1.9s;
+}
+
+.dev-info-description svg {
+    color: white;
+    min-width: 30px;
 }
 
 .main-menu ul {
@@ -196,7 +207,7 @@ section {
 .technologies-section {
     background-image: url("../static/img/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     padding-top: 50px;
     padding-bottom: 100px;
 }
