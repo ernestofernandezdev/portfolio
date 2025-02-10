@@ -23,7 +23,18 @@
                 <h1>Ernesto Fernández</h1>
                 <h2>Backend Developer</h2>
                 <h4>fernandez.ernes@gmail.com</h4>
-                <div class="links"></div>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/ernesto-fern%C3%A1ndez-b813a9225/" target="_blank">
+                        <svg id="linkedin-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.6 2.39999H5.39999C3.74399 2.39999 2.39999 3.74399 2.39999 5.39999V24.6C2.39999 26.256 3.74399 27.6 5.39999 27.6H24.6C26.256 27.6 27.6 26.256 27.6 24.6V5.39999C27.6 3.74399 26.256 2.39999 24.6 2.39999ZM10.2 12V23.4H6.59999V12H10.2ZM6.59999 8.68199C6.59999 7.84199 7.31999 7.19999 8.39999 7.19999C9.47999 7.19999 10.158 7.84199 10.2 8.68199C10.2 9.52199 9.52799 10.2 8.39999 10.2C7.31999 10.2 6.59999 9.52199 6.59999 8.68199ZM23.4 23.4H19.8C19.8 23.4 19.8 17.844 19.8 17.4C19.8 16.2 19.2 15 17.7 14.976H17.652C16.2 14.976 15.6 16.212 15.6 17.4C15.6 17.946 15.6 23.4 15.6 23.4H12V12H15.6V13.536C15.6 13.536 16.758 12 19.086 12C21.468 12 23.4 13.638 23.4 16.956V23.4Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/ernestofernandezdev" target="_blank">
+                        <svg id="github-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 3C8.373 3 3 8.373 3 15C3 20.623 6.872 25.328 12.092 26.63C12.036 26.468 12 26.28 12 26.047V23.996C11.513 23.996 10.697 23.996 10.492 23.996C9.671 23.996 8.941 23.643 8.587 22.987C8.194 22.258 8.126 21.143 7.152 20.461C6.863 20.234 7.083 19.975 7.416 20.01C8.031 20.184 8.541 20.606 9.021 21.232C9.499 21.859 9.724 22.001 10.617 22.001C11.05 22.001 11.698 21.976 12.308 21.88C12.636 21.047 13.203 20.28 13.896 19.918C9.9 19.507 7.993 17.519 7.993 14.82C7.993 13.658 8.488 12.534 9.329 11.587C9.053 10.647 8.706 8.73 9.435 8C11.233 8 12.32 9.166 12.581 9.481C13.477 9.174 14.461 9 15.495 9C16.531 9 17.519 9.174 18.417 9.483C18.675 9.17 19.763 8 21.565 8C22.297 8.731 21.946 10.656 21.667 11.594C22.503 12.539 22.995 13.66 22.995 14.82C22.995 17.517 21.091 19.504 17.101 19.917C18.199 20.49 19 22.1 19 23.313V26.047C19 26.151 18.977 26.226 18.965 26.315C23.641 24.676 27 20.236 27 15C27 8.373 21.627 3 15 3Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     
@@ -125,7 +136,66 @@
         </div>
     </section>
 
-    <section></section>
+    <section class="courses-section">
+        <h1>Courses</h1>
+        <div class="courses">
+            <div class="course">
+                <img class="udemy-course" src="./static/img/udemy-png.png" alt="udemy">
+                <img class="course-img" src="./static/img/junit-mockito-png.png" alt="testing tech">
+                <hr>
+                <h2>Spring Boot Unit Testing with JUnit, Mockito and MockMvc</h2>
+                <h4>Certificate: <a href="">https://ude.my/UC-147489ad-3d4e-4d61-9aeb-4ac5b0e83bf0/</a></h4>
+            </div>
+            <div class="course">
+                <img class="udemy-course" src="./static/img/udemy-png.png" alt="udemy">
+                <img class="course-img" src="./static/img/spring-png.png" alt="spring">
+                <hr>
+                <h2>Spring Boot 3, Spring 6 & Hibernate for Beginners</h2>
+                <h4>Certificate: <a href="">https://ude.my/UC-2b0151e2-4bc3-48a0-9fd9-98e7bcbbc065/</a></h4>
+            </div>
+            <div class="course">
+                <img class="udemy-course" src="./static/img/udemy-png.png" alt="udemy">
+                <img class="course-img" src="./static/img/aws-png.png" alt="aws">
+                <hr>
+                <h2>DevOps Beginners to Advanced with Projects</h2>
+                <h4>Certificate: <a href="">http://ude.my/UC-cde34967-1499-4abf-a425-de1fafb61286/</a></h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <h1>Projects</h1>
+        <div class="card-container">
+            <div class="card">
+              <div class="card-content">
+                <h2>Products API</h2>
+                <p>This is one of my first projects, where I put into practice everything I learned of Spring and testing. The API allows the user to manage products and perform the basic <span class="important-text">CRUD</span> operations, while storing all the data into a <span class="important-text">SQL DataBase</span>.</p>
+                <p><span class="bold">Tech stack:</span> Java, Spring, JUnit, Mockito, SQL, Hibernate</p>
+                <p class="subtext">GitHub: <a href="https://github.com/ernestofernandezdev/products-api" target="_blank">https://github.com/ernestofernandezdev/products-api</a></p>
+              </div>
+              <div class="card-image">
+                <img src="./static/img/api-png.png" alt="API">
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-content">
+                <h2>Magnetic stirrer</h2>
+                <p>This project is a low cost magnetic stirrer, a device used to mix chemichal substances on the lab. For this project we used <span class="important-text">Arduino technologies</span>, and I was in charge of writing the code in C++. I also made the electronic connections on the Arduino board. We were a group of 5 people, so I gained experience <span class="important-text">working with pairs</span> and agreeing in the terms of the development. The project was thought to be used at highschool labs, so we also had to <span class="important-text">take the requirements</span> before we started.</p>
+                <p><span class="bold">Tech stack:</span> Arduino, C++, Electronics, Team work</p>
+                <p class="subtext">GitHub: <a href=" https://github.com/ernestofernandezdev/products-api" target="_blank"> https://github.com/ernestofernandezdev/products-api</a></p>
+            </div>
+              <div class="card-image">
+                <img src="./static/img/stirrer.jpg" alt="stirrer">
+              </div>
+            </div>
+          </div>
+          <div class="degrade"></div>
+    </section>
+
+    <footer></footer>
+
+    
     
     <script src="./js/script.js"></script>
 </body>
