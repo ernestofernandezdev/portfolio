@@ -150,9 +150,8 @@ section {
 
 
 .about-me-section {
-    background: linear-gradient(rgba(255,255,255,0), white 30%);
-    margin-top: -30%;
-    padding-top: 300px;
+    background: linear-gradient(rgba(255,255,255,0), white 300px);
+    margin-top: -400px;
     margin-bottom: 100px;
     display: grid;
     grid-template-areas: 
@@ -160,12 +159,11 @@ section {
             'description image'
             'timeline timeline';
     grid-template-columns: 3fr 4fr;
-    grid-template-rows: fit-content() fit-content() fit-content()
 }
 
 .about-me-section h1 {
     grid-area: title;
-    margin-top: 50px;
+    margin-top: 350px;
 }
 
 .about-me-section > p {
@@ -180,6 +178,7 @@ section {
     height: fit-content;
     position: relative;
     overflow: hidden;
+    margin-top: 350px;
 }
 
 .about-me-section .image img {
@@ -265,33 +264,6 @@ section {
     margin: 8px 0;
 }
 
-.technologies > div:first-child > img {
-    padding: 50px 0;
-    height: 70%;
-    margin: 0 100px;
-}
-
-.technologies > div:nth-child(2) > img {
-    padding: 50px 0;
-    width: 40%;
-    margin-left: 50px;
-    margin-right: 80px;
-}
-
-.technologies > div:nth-child(3) > img {
-    padding: 50px 0;
-    width: 30%;
-    margin-left: 80px;
-    margin-right: 100px;
-}
-
-.technologies > div:nth-child(4) > img {
-    padding: 50px 0;
-    height: 50%;
-    margin: 0 80px;
-    margin-right: 120px;
-}
-
 
 
 
@@ -375,9 +347,9 @@ section {
     margin-bottom: 50px;
 }
 
-.projects {
-    
-}
+
+
+
 
 
 .card-container {
@@ -500,6 +472,14 @@ footer {
 
 @media (max-width: 900px) {
 
+    p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 0 30px;
+    }
+
     h1 {
         font-size: 35px;
     }
@@ -524,7 +504,7 @@ footer {
     .dev-info {
         flex-direction: column;
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 300px;
     }
 
     .dev-info-img {
@@ -550,6 +530,119 @@ footer {
     .dev-info-img img {
         width: 100%;
         height: 100%;
+    }
+
+
+
+    .about-me-section {
+        background: linear-gradient(rgba(255,255,255,0), white 200px);
+        margin-top: -200px;
+        grid-template-areas: 
+                'title'
+                'description'
+                'image'
+                'timeline';
+        grid-template-columns: 1fr;
+    }
+
+    .about-me-section h1 {
+        margin-top: 250px;
+        margin-bottom: 50px;
+    }
+
+    .about-me-section p {
+        padding: 0;
+    }
+
+    .about-me-section .image {
+        margin-top: 20px;
+    }
+
+    .about-me-section .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-me-section .image .degrade {
+        display: none;
+    }
+
+    .about-me-section .timeline {
+        display: none;
+    }
+
+
+
+    .technologies {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .technologies div {
+        width: 100%;
+        flex-direction: column;
+        height: fit-content;
+        align-items: baseline;
+    }
+
+    .technologies img {
+        width: auto;
+        max-width: 70%;
+        height: 50vw;
+        margin: 50px 0;
+        align-self: center;
+    }
+
+    .technologies ul {
+        position: initial;
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+
+    .technologies li {
+        font-size: 18px;
+        color: white;
+    }
+
+    .technologies > div:nth-child(3) > img {
+        width: 50%;
+        height: auto;
+    }
+
+    .technologies > div:nth-child(4) > img {
+        width: 50%;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 900px) {
+    
+    .technologies > div:first-child > img {
+        padding: 50px 0;
+        height: 70%;
+        margin: 0 100px;
+    }
+
+    .technologies > div:nth-child(2) > img {
+        padding: 50px 0;
+        width: 40%;
+        margin-left: 50px;
+        margin-right: 80px;
+    }
+
+    .technologies > div:nth-child(3) > img {
+        padding: 50px 0;
+        width: 30%;
+        margin-left: 80px;
+        margin-right: 100px;
+    }
+
+    .technologies > div:nth-child(4) > img {
+        padding: 50px 0;
+        height: 50%;
+        margin: 0 80px;
+        margin-right: 120px;
     }
 
 }

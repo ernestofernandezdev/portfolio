@@ -45,7 +45,6 @@ function drawTimeline() {
 
     points.forEach(i => {
         ctx.beginPath();
-        console.log(x + windowWidth*i/6);
         ctx.arc(x + windowWidth*i/6, y, 4, 0, 2 * Math.PI);
         ctx.fillStyle = "black";
         ctx.fill();
