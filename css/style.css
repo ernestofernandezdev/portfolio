@@ -63,7 +63,8 @@ section {
 
 .dev-info h1 {
     margin-bottom: 10px;
-    width: 0;
+    width: fit-content;
+    max-width: 0;
     overflow: hidden;
     white-space: nowrap;
     animation: name-appear 1s ease-in-out forwards;
@@ -72,7 +73,8 @@ section {
 
 .dev-info h2 {
     margin-bottom: 10px;
-    width: 0;
+    width: fit-content;
+    max-width: 0;
     overflow: hidden;
     white-space: nowrap;
     animation: name-appear 1s ease-in-out forwards;
@@ -80,7 +82,8 @@ section {
 }
 
 .dev-info h4 {
-    width: 0;
+    width: fit-content;
+    max-width: 0;
     overflow: hidden;
     white-space: nowrap;
     animation: name-appear 1s ease-in-out forwards;
@@ -107,7 +110,8 @@ section {
 .dev-info-description div {
     display: flex;
     margin-top: 10px;
-    width: 0;
+    width: fit-content;
+    max-width: 0;
     overflow: hidden;
     animation: name-appear 2s ease-in forwards;
     animation-delay: 1.9s;
@@ -386,7 +390,7 @@ section {
   
   .card-content p {
     color: white;
-    margin-bottom: 0px;
+    margin-bottom: 30px;
   }
 
   .card-content a {
@@ -471,10 +475,10 @@ footer {
 
 @keyframes name-appear {
     from {
-        width: 0;
+        max-width: 0;
     }
     to {
-        width: 500px;
+        max-width: 500px;
     }
 }
 
@@ -650,6 +654,7 @@ footer {
 
     .card-container {
         margin: 0 30px;
+        width: calc(100%-60px);
     }
 
     .card {
