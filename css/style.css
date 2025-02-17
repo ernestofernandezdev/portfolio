@@ -386,7 +386,7 @@ section {
   
   .card-content p {
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 
   .card-content a {
@@ -416,9 +416,6 @@ section {
 
   .card-content a svg {
     margin-right: 5px;
-  } {
-    display: flex;
-    align-items: center;
   }
   
   .card-image {
