@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function pageLoaded() {
     handleLinks();
     drawTimeline();
+    animateAboutMe();
+    animateCourses();
 }
 
 
@@ -49,5 +51,25 @@ function drawTimeline() {
         ctx.fillStyle = "black";
         ctx.fill();
         ctx.stroke();
+    })
+}
+
+function animateAboutMe() {
+    window.addEventListener("scroll", e => {
+        if (document.documentElement.scrollTop > 600) {
+            document.querySelector("#about-me").classList.add("appear-left");
+            document.querySelector(".about-me-section .info").classList.add("appear-left");
+            document.querySelector(".about-me-section .image").classList.add("appear-right");
+        }
+    })
+}
+
+function animateCourses() {
+    window.addEventListener("scroll", e => {
+        if (document.documentElement.scrollTop > 2700) {
+            document.querySelectorAll(".course").forEach(e => {
+                e.classList.add("appear-down");
+            })
+        }
     })
 }
