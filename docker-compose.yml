@@ -1,26 +1,12 @@
 services:
   nginx:
     image: ernestofernandezdev/proxy:0b6e7adf12c7ba957ea20e47d71dcd6b1d7eb622
-    container_name: nginx-container
     ports:
-      - "80:80"  # Redirige el puerto 80 al contenedor NGINX
-    networks:
-      app-network:
-        aliases:
-          - nginx
+      - "80:80"
     depends_on:
       - spring-app  # Asegúrate de que spring-app esté disponible
 
   spring-app:
     image: ernestofernandezdev/api:0b6e7adf12c7ba957ea20e47d71dcd6b1d7eb622
-    container_name: spring-app-container
     ports:
-      - "8080:8080"  # Exponer el puerto 8080 solo dentro de la red de Docker
-    networks:
-      app-network:
-        aliases:
-          - spring-api
-
-networks:
-  app-network:
-    driver: bridge
+      - "8080:8080"
