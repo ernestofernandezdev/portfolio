@@ -5,7 +5,9 @@ services:
     ports:
       - "80:80"  # Redirige el puerto 80 al contenedor NGINX
     networks:
-      - app-network  # Conectando con la misma red que NGINX
+      app-network:
+        aliases:
+          - nginx
     depends_on:
       - spring-app  # Asegúrate de que spring-app esté disponible
 
@@ -15,7 +17,9 @@ services:
     ports:
       - "8080:8080"  # Exponer el puerto 8080 solo dentro de la red de Docker
     networks:
-      - app-network  # Conectando con la misma red que NGINX
+      app-network:
+        aliases:
+          - spring-api
 
 networks:
   app-network:
