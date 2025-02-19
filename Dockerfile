@@ -3,7 +3,7 @@ FROM nginx:latest
 
 # Copia los archivos estáticos al directorio adecuado en NGINX
 COPY ./static /usr/share/nginx/html
-COPY ./nginx /etc/nginx/nginx.conf
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Exponer el puerto 80 (por defecto de NGINX)
 EXPOSE 80
