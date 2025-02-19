@@ -20,7 +20,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build the package
-        run: mvn package
+        run: mvn package ./portfolio-api
 
       - name: Cache Maven dependencies
         uses: actions/cache@v2
