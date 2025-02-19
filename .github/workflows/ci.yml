@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '21'
-          distribution: 'temurin'
+          distribution: 'oracle'
 
       - name: Build the package
         run: mvn -f ./portfolio-api/pom.xml package
