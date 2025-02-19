@@ -20,7 +20,7 @@ jobs:
           distribution: 'oracle'
 
       - name: Build the package
-        run: mvn -f ./portfolio-api/pom.xml package
+        run: mvn -f ./portfolio-api/pom.xml clean package
 
       - name: Cache Maven dependencies
         uses: actions/cache@v2
