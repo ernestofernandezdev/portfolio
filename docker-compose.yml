@@ -4,6 +4,8 @@ services:
     container_name: nginx-container
     ports:
       - "80:80"  # Redirige el puerto 80 al contenedor NGINX
+    networks:
+      - app-network  # Conectando con la misma red que NGINX
     depends_on:
       - spring-app  # Asegúrate de que spring-app esté disponible
 
