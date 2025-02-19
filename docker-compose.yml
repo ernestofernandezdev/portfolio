@@ -1,7 +1,7 @@
 services:
   nginx:
-    image: nginx:latest
-    container_name: ernestofernandezdev/proxy:0b6e7adf12c7ba957ea20e47d71dcd6b1d7eb622
+    image: ernestofernandezdev/proxy:0b6e7adf12c7ba957ea20e47d71dcd6b1d7eb622
+    container_name: nginx-container
     ports:
       - "80:80"  # Redirige el puerto 80 al contenedor NGINX
     depends_on:
