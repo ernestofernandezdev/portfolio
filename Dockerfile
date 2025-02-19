@@ -7,6 +7,3 @@ COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Exponer el puerto 80 (por defecto de NGINX)
 EXPOSE 80
-
-# Inicia Nginx cuando el contenedor se ejecute
-CMD ["nginx", "-g", "daemon off;"]
