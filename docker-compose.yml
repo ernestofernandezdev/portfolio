@@ -1,12 +1,12 @@
 services:
   nginx:
-    image: ernestofernandezdev/proxy:0b6e7adf12c7ba957ea20e47d71dcd6b1d7eb622
+    image: ernestofernandezdev/proxy:{commit-code}
     ports:
       - "80:80"
     depends_on:
       - spring-app  # Asegúrate de que spring-app esté disponible
 
   spring-app:
-    image: ernestofernandezdev/api:0b6e7adf12c7ba957ea20e47d71dcd6b1d7eb622
+    image: ernestofernandezdev/api:{commit-code}
     ports:
       - "8080:8080"
