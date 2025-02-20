@@ -112,6 +112,10 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         name: portfolio-ssh-key
         known_hosts: ${{ secrets.SERVER_IP }}
+    
+    - name: SSH to remote server and restart Docker Compose
+      run: |
+        ssh -i ~/.ssh/portfolio-ssh-key root@${{ secrets.SERVER_IP }} echo "hello"
 
     - name: SSH to remote server and restart Docker Compose
       run: |
