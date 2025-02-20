@@ -106,25 +106,22 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v3
 
-    - name: Install SSH key
-      uses: shimataro/ssh-key-action@v2
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v1.2.1
       with:
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        name: portfolio-ssh-key
-        known_hosts: ${{ secrets.SERVER_IP }}
-    
-    - name: SSH to remote server and restart Docker Compose
-      run: |
-        ssh -i ~/.ssh/portfolio-ssh-key root@${{ secrets.SERVER_IP }} echo "hello"
+        host: ${{ secrets.SERVER_IP }}
+        username: root
+        password: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: whoami
 
-    - name: SSH to remote server and restart Docker Compose
-      run: |
-        ssh -i ~/.ssh/portfolio-ssh-key root@${{ secrets.SERVER_IP }} << EOF
-          echo "Restarting Docker Compose service..."
-          docker-compose down
-          curl https://raw.githubusercontent.com/ernestofernandezdev/portfolio/refs/heads/master/docker-compose.yml > docker-compose
-          sed -i 's/{commit-code}/${{github.sha}}/' docker-compose.yml
-          docker rmi -f $(docker images -aq)
-          docker-compose up -d
-          echo "Docker Compose restarted successfully."
-        EOF
+    # - name: SSH to remote server and restart Docker Compose
+    #   run: |
+    #     ssh -i ~/.ssh/portfolio-ssh-key root@{$ secrets.SERVER_IP }} << EOF
+    #       echo "Restarting Docker Compose service..."
+    #       docker-compose down
+    #       curl https://raw.githubusercontent.com/ernestofernandezdev/portfolio/refs/heads/master/docker-compose.yml > docker-compose
+    #       sed -i 's/{commit-code}/${github.sha}}/' docker-compose.yml
+    #       docker rmi -f $(docker images -aq)
+    #       docker-compose up -d
+    #       echo "Docker Compose restarted successfully."
+    #     EOF
