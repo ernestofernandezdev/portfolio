@@ -118,10 +118,10 @@ jobs:
     #   run: |
     #     ssh -i ~/.ssh/portfolio-ssh-key root@{$ secrets.SERVER_IP }} << EOF
     #       echo "Restarting Docker Compose service..."
-    #       docker-compose down
+    #       docker compose down
     #       curl https://raw.githubusercontent.com/ernestofernandezdev/portfolio/refs/heads/master/docker-compose.yml > docker-compose
     #       sed -i 's/{commit-code}/${github.sha}}/' docker-compose.yml
     #       docker rmi -f $(docker images -aq)
-    #       docker-compose up -d
+    #       docker compose up -d
     #       echo "Docker Compose restarted successfully."
     #     EOF
