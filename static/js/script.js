@@ -3,27 +3,67 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function pageLoaded() {
-    handleLinks();
+    fadeOutLoader();
+    handleMainMenu();
+    animateTopButton();
     drawTimeline();
     animateAboutMe();
     animateCourses();
 }
 
 
-function handleLinks() {
-    
+function fadeOutLoader() {
+    document.body.style.overflow = 'hidden';
+    document.querySelector(".load-container").classList.add("hide");
+    setTimeout(e => {
+        document.body.style.overflow = 'auto';
+        document.querySelector(".load-container").classList.add("dissapear");
+    }, 2700)
 }
 
-function animateMainMenu() {
-    document.querySelectorAll(".main-menu li").forEach(el => {
-        el.addEventListener("mouseover", e => {
-            e.target.classList.remove("reverse-animate-main-menu");
-            e.target.classList.add("animate-main-menu");
-        })
-        el.addEventListener("mouseout", e => {
-            e.target.classList.remove("animate-main-menu");
-            e.target.classList.add("reverse-animate-main-menu");
-        })
+function handleMainMenu() {
+  document.querySelector('.main-menu li:nth-child(1)').addEventListener("click", e => {
+    document.getElementById('about-me').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  })
+
+  document.querySelector('.main-menu li:nth-child(2)').addEventListener("click", e => {
+    document.getElementById('technologies').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  })
+
+  document.querySelector('.main-menu li:nth-child(3)').addEventListener("click", e => {
+    document.getElementById('courses').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  })
+
+  document.querySelector('.main-menu li:nth-child(4)').addEventListener("click", e => {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  })
+  
+}
+
+function animateTopButton() {
+    let button = document.querySelector(".go-up");
+    let shown = false;
+    window.addEventListener("scroll", e => {
+        if (document.documentElement.scrollTop > 700 && !shown) {
+            button.classList.remove("dissapear");
+            setTimeout(e => {
+                button.classList.remove("hide");
+            }, 100);
+            shown = true;
+        } else if (document.documentElement.scrollTop <= 700 && shown) {
+            button.classList.add("hide");
+            setTimeout(e => {
+                button.classList.add("dissapear");
+            }, 500);
+            shown = false;
+        }
+    })
+
+    button.addEventListener("click", e => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     })
 }
 
@@ -56,7 +96,7 @@ function drawTimeline() {
 
 function animateAboutMe() {
     window.addEventListener("scroll", e => {
-        if (document.documentElement.scrollTop > 600) {
+        if (document.documentElement.scrollTop > 600 && window.innerWidth > 900) {
             document.querySelector("#about-me").classList.add("appear-left");
             document.querySelector(".about-me-section .info").classList.add("appear-left");
             document.querySelector(".about-me-section .image").classList.add("appear-right");
@@ -66,7 +106,7 @@ function animateAboutMe() {
 
 function animateCourses() {
     window.addEventListener("scroll", e => {
-        if (document.documentElement.scrollTop > 2700) {
+        if (document.documentElement.scrollTop > 2700 && window.innerWidth > 900) {
             document.querySelectorAll(".course").forEach(e => {
                 e.classList.add("appear-down");
             })
