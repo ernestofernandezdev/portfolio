@@ -68,15 +68,25 @@ section {
     transition: opacity 0.7s ease-in 2s;
     color: white;
 }
-/* 
+
 .load-container h1 {
-    margin: 0;
-    position: absolute;
-    top: 600px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100vh;
-} */
+    margin: 40vh auto 0 auto;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    animation: loader 2.7s ease-out forwards;
+}
+
+@keyframes loader {
+    from {
+        opacity: 0;
+        top: 50px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
 
 .hide {
     opacity: 0;
